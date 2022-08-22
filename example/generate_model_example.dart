@@ -17,7 +17,7 @@ main() {
   final classGenerator = new ModelGenerator('Sample');
   final currentDirectory = dirname(_scriptPath());
   final filePath = normalize(join(currentDirectory, 'sample.json'));
-  final jsonRawData = new File(filePath).readAsStringSync();
+  final jsonRawData = new File(r'E:\dart\json_to_dart\example\sample.json').readAsStringSync();
   DartCode dartCode = classGenerator.generateDartClasses(jsonRawData);
   print(dartCode.code);
 }
